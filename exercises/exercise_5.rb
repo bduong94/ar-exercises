@@ -8,9 +8,9 @@ puts "Exercise 5"
 puts "----------"
 
 # Your code goes here ...
-@sum = Stores.sum("annual_revenue")
+@sum = Store.sum("annual_revenue")
 puts @sum
-@average = Stores.average("annual_revenue")
+@average = Store.average("annual_revenue")
 puts @average
-@total_stores_higher_than_mil = Stores.where("annual_revenue > 1000000").count(:all)
+@total_stores_higher_than_mil = Store.where("annual_revenue > 1000000").count(:all)
 puts @total_stores_higher_than_mil
