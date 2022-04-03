@@ -10,3 +10,9 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+@userstorename = gets
+
+@store7 = Store.create(name: @userstorename)
+puts @store7.errors[:annual_revenue]
+puts @store7.errors[:mens_apparel]
+puts @store7.errors[:womens_apparel]

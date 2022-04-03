@@ -13,8 +13,9 @@ class Store < ActiveRecord::Base
     validate :has_apparel
 
     def has_apparel
-        if mens_apparel == false && womens_apparel == false
-            errors.add(:mens_apparel, :womens_apparel, "Need at least one store")
+        if (mens_apparel == false && womens_apparel == false) || (mens_apparel == nil && womens_apparel == nil)
+            errors.add(:mens_apparel, "need at least one store")
+            errors.add(:womens_apparel, "need at least one store")
         end
     end
 end
