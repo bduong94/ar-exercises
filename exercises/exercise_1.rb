@@ -7,6 +7,11 @@ puts "----------"
 # Your code goes below here ...
 
 class Stores < ActiveRecord::Base
+    has_many :employees
+end
+
+class Employees < ActiveRecord::Base
+    belongs_to :store
 end
 
 burnaby = Stores.create(name: "Burnaby", annual_revenue: 300000, mens_apparel: true, womens_apparel:true);
